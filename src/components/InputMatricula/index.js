@@ -1,7 +1,8 @@
 import InputMask from "react-input-mask";
 
-const InputMatricula = ({ nome, mascara, obrigatorio = false, placeHolder }) => {
-    return (
+const InputMatricula = ({ label, nome, mascara, obrigatorio = false, placeHolder }) => {
+    return (<>
+        <label htmlFor={nome}>{label}:</label>
         <InputMask
             id={nome}
             name={nome}
@@ -11,7 +12,7 @@ const InputMatricula = ({ nome, mascara, obrigatorio = false, placeHolder }) => 
             placeholder={placeHolder}
         >
         </InputMask>
-    );
+    </>);
 }
 
 export default InputMatricula;
