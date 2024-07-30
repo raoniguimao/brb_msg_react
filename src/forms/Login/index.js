@@ -21,8 +21,6 @@ const FormLogin = () => {
         setInputs(values => ({ ...values, [name]: value }));
     }
 
-    function logar(formData) { }
-
     return (
         <form onSubmit={evento => aoEntrar(evento)}>
             <div className="form-group row">
