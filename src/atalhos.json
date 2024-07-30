@@ -1,0 +1,248 @@
+{
+    "nome": "Atalhos",
+    "id": "1",
+    "children": [
+        {
+            "nome": "Cadastros",
+            "id": "11",
+            "children": [
+                {
+                    "nome": "Acesso",
+                    "id": "111",
+                    "children": [
+                        {
+                            "nome": "Usuario",
+                            "id": "1111",
+                            "url": "/Cadastros/Acesso/Usuario"
+                        },
+                        {
+                            "nome": "Perfil",
+                            "id": "1112",
+                            "url": "/Cadastros/Acesso/Perfil"
+                        },
+                        {
+                            "nome": "Perfil de Usuário",
+                            "id": "1113",
+                            "url": "/Cadastros/Acesso/Perfil_Usuario"
+                        }
+                    ]
+                },
+                {
+                    "nome": "Catálogo",
+                    "id": "112",
+                    "children": [
+                        {
+                            "nome": "Grupo de Evento",
+                            "id": "1121",
+                            "url": "/Cadastros/Catalogo/GrupoEvento"
+                        },
+                        {
+                            "nome": "Evento",
+                            "id": "1122",
+                            "url": "/Cadastros/Catalogo/Evento"
+                        },
+                        {
+                            "nome": "Mensagem",
+                            "id": "1123",
+                            "url": "/Cadastros/Catalogo/Mensagem"
+                        },
+                        {
+                            "nome": "Tag x Mensagem",
+                            "id": "1124",
+                            "url": "/Cadastros/Catalogo/TagMensagem"
+                        },
+                        {
+                            "nome": "Tag",
+                            "id": "1125",
+                            "url": "/Cadastros/Catalogo/Tag"
+                        },
+                        {
+                            "nome": "Tipo de Tag",
+                            "id": "1126",
+                            "url": "/Cadastros/Catalogo/TipoTag"
+                        },
+                        {
+                            "nome": "Domínio",
+                            "id": "1127",
+                            "url": "/Cadastros/Catalogo/Dominio"
+                        },
+                        {
+                            "nome": "Erros",
+                            "id": "1128",
+                            "url": "/Cadastros/Catalogo/Erros"
+                        }
+                    ]
+                },
+                {
+                    "nome": "Operações",
+                    "id": "113",
+                    "children": [
+                        {
+                            "nome": "Operação",
+                            "id": "1131",
+                            "url": "/Cadastros/Operacoes/Operacao"
+                        },
+                        {
+                            "nome": "Elementos de dados",
+                            "id": "1132",
+                            "url": "/Cadastros/Operacoes/ElementoDados"
+                        },
+                        {
+                            "nome": "Layout Operação",
+                            "id": "1133",
+                            "url": "/Cadastros/Operacoes/LayoutOperacao"
+                        },
+                        {
+                            "nome": "Regra Operação",
+                            "id": "1134",
+                            "url": "/Cadastros/Operacoes/RegraOperacao"
+                        },
+                        {
+                            "nome": "Condição Operação",
+                            "id": "1135",
+                            "url": "/Cadastros/Operacoes/CondicaoOperacao"
+                        }
+                    ]
+                },
+                {
+                    "nome": "Horário",
+                    "id": "114",
+                    "children": [
+                        {
+                            "nome": "Grade Horária",
+                            "id": "1141",
+                            "url": "/Cadastros/Horarios/GradeHoraria"
+                        },
+                        {
+                            "nome": "Grade Evento",
+                            "id": "1142",
+                            "url": "/Cadastros/Horarios/GradeEvento"
+                        }
+                    ]
+                },
+                {
+                    "nome": "Ambiente",
+                    "id": "115",
+                    "children": [
+                        {
+                            "nome": "Parâmetros",
+                            "id": "1151",
+                            "url": "/Cadastros/Ambiente/Parametros"
+                        },
+                        {
+                            "nome": "Filas",
+                            "id": "1152",
+                            "url": "/Cadastros/Ambiente/Filas"
+                        },
+                        {
+                            "nome": "Clearing",
+                            "id": "1153",
+                            "url": "/Cadastros/Ambiente/Clearing"
+                        }
+                    ]
+                },
+                {
+                    "nome": "Sistema",
+                    "id": "116",
+                    "children": [
+                        {
+                            "nome": "Sistema",
+                            "id": "1161",
+                            "url": "/Cadastros/Sistemas/Sistema"
+                        },
+                        {
+                            "nome": "Sistema x Eventos",
+                            "id": "1162",
+                            "url": "/Cadastros/Sistemas/SistemaEventos"
+                        }
+                    ]
+                },
+                {
+                    "nome": "Workflows",
+                    "id": "117",
+                    "children": [
+                        {
+                            "nome": "Regra Workflow",
+                            "id": "1171",
+                            "url": "/Cadastros/Workflows/RegraWorkflow"
+                        },
+                        {
+                            "nome": "Regra Encadeamento",
+                            "id": "1172",
+                            "url": "/Cadastros/Workflows/RegraEncadeamento"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nome": "Piloto",
+            "id": "12",
+            "children": [
+                {
+                    "nome": "Controle",
+                    "id": "121",
+                    "children": [
+                        {
+                            "nome": "Envio Manual",
+                            "id": "1211",
+                            "url": "/Piloto/Controle/EnvioManual"
+                        },
+                        {
+                            "nome": "Monitoramento",
+                            "id": "1211",
+                            "url": "/Piloto/Controle/Monitoramento"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "nome": "Consulta",
+            "id": "13",
+            "children": [
+                {
+                    "name": "Geral",
+                    "id": "131",
+                    "children": [
+                        {
+                            "nome": "Mensagem",
+                            "id": "1311",
+                            "url": "/Consulta/Geral/Mensagem"
+                        },
+                        {
+                            "nome": "Workflow",
+                            "id": "1312",
+                            "url": "/Consulta/Geral/Workflow"
+                        },
+                        {
+                            "nome": "Catálogo Eletrônico",
+                            "id": "1313",
+                            "url": "/Consulta/Geral/CatalogoEletronico"
+                        },
+                        {
+                            "nome": "Operação",
+                            "id": "1314",
+                            "url": "/Consulta/Geral/Operacao"
+                        },
+                        {
+                            "nome": "Grade Horária",
+                            "id": "1315",
+                            "url": "/Consulta/Geral/GradeHoraria"
+                        },
+                        {
+                            "nome": "Sistema x Eventos",
+                            "id": "1316",
+                            "url": "/Consulta/Geral/SistemaEventos"
+                        },
+                        {
+                            "nome": "Log de Segurança",
+                            "id": "1317",
+                            "url": "/Consulta/Geral/LogSeguranca"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
