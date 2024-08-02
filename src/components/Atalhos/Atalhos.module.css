@@ -1,0 +1,24 @@
+h3,
+h4 {
+    text-align: center;
+    padding: 0.5em;
+}
+
+h3 {
+    background-color: grey;
+    color: white;
+    font-size: large;
+}
+
+h4 {
+    background-color: silver;
+    color: blue;
+    font-size: medium;
+}
+
+.ul_dLinks {
+    border: 1px solid black;
+    padding: 0.5em;
+    text-align: left;
+    list-style-type: none;
+}
