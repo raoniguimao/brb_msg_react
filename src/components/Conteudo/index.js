@@ -17,9 +17,6 @@ const Conteudo = ({ children }) => {
 			</div>
 			<div className="row">
 				<Atalhos />
-				<section id="secArvore" className="col-2">
-					<h3>Árvore</h3>
-				</section>
 				<section id="secTelas" className="col-6">
 					<h3>Tela</h3>
 					{children}
