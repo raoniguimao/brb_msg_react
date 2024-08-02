@@ -1,60 +1,58 @@
-import { Link } from 'react-router-dom';
 import menus from '../../atalhos.json';
-
-function imprimeLi(elemento) {
-    if (!elemento.children) {
-        console.log(elemento.id + ': ' + elemento.nome);
-        return (
-            <li key={elemento.id} className="nav-item">
-                <Link to={elemento.url} className='nav-link'>{elemento.nome}</Link>
-            </li>
-        );
-    }
-    return (
-        <li key={elemento.id} className='nav-item dropdown'>
-            <Link className='nav-link dropdown-toggle' data-toggle="dropdown" role='button' aria-haspopup="true" aria-expanded="false">{elemento.nome}</Link>
-            <ul className='dropdown-menu'>{imprimeLi(elemento)}</ul>
-        </li>
-    );
-}
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import styles from './Atalhos.module.css';
 
 const Atalhos = () => {
+    const [tela, setTela] = useState('');
+
+    const abreLinks = (obj) => {
+        // console.log(obj.children);
+        const lis = obj.children.map((objn4) => {
+            return (<li key={objn4.id}>
+                <NavLink to={`${objn4.url}`}>{objn4.nome}</NavLink>
+            </li>);
+        });
+
+        setTela(lis);
+    }
+
+    const idAccordion = `div_Accordion_${menus.id}`;
     const n2 = menus.children.filter(function (elem) {
         return elem.id.length === 2;
     });
-    return (
-        <section id="secAtalhos" className="col-2">
-            <h3>{menus.nome}</h3>
-            <div className="accordion" id="accordionAtalhos">
+    return (<>
+        <section id={`sec_${menus.id}`} className="col-2">
+            <h3 id={`h3_${menus.id}`}>{menus.nome}</h3>
+            <div id={idAccordion} className="accordion">
                 {n2.map((objN2) => {
-                    const headID = `head${objN2.id}`;
-                    const divID = `div${objN2.id}`;
+                    const head_N2_ID = `head_n2_${objN2.id}`;
+                    const div_N2_ID = `div_n2_${objN2.id}`;
 
                     const n3 = objN2.children.filter(function (elem) {
                         return elem.id.length === 3;
                     });
 
                     return (
-                        <div id={`card${objN2.id}`} className="card">
-                            <div className='card-header' id={headID}>
-                                <h4>
-                                    <button
-                                        className="btn btn-default"
-                                        type="button"
+                        <div key={`card${objN2.id}`} className="card">
+                            <div id={head_N2_ID} className='card-header'>
+                                <h5 key={`h4_n2_${objN2.id}`}>
+                                    <NavLink
+                                        key={`btn_n2_${objN2.id}`}
                                         data-toggle="collapse"
                                         aria-expanded="false"
-                                        data-target={`#${divID}`}
-                                        aria-controls={divID}>
+                                        data-target={`#${div_N2_ID}`}
+                                        aria-controls={div_N2_ID}>
                                         {objN2.nome}
-                                    </button>
-                                </h4>
+                                    </NavLink>
+                                </h5>
                             </div>
-                            <div id={divID} className='collapse' aria-labelledby={headID} data-parent="#accordionAtalhos">
-                                <div className='card-body'>
-                                    <ul className='nav flex-column'>{
+                            <div id={div_N2_ID} className='collapse' aria-labelledby={head_N2_ID} data-parent={`#${idAccordion}`}>
+                                <div key={`div_cBody_${objN2.id}`} className='card-body'>
+                                    <ul key={`ul_${objN2.id}`} className='nav flex-column'>{
                                         n3.map((objN3) => {
-                                            return (<li key={objN3.id} className='nav-item'>
-                                                <a className='nav-link'>{objN3.nome}</a>
+                                            return (<li key={`li_n3_${objN3.id}`} className='nav-item'>
+                                                <NavLink onClick={evento => abreLinks(objN3)}>{objN3.nome}</NavLink>
                                             </li>);
                                         })
                                     }
@@ -64,27 +62,13 @@ const Atalhos = () => {
                         </div>
                     );
                 })}
-                {/*
-                <div className="card-header" id="headingCadastros">
-                    <h4>
-                        <button className="btn btn-default" type="button" data-toggle="collapse" data-target="#divCadastros" aria-expanded="false" aria-controls="divCadastros">Cadastros</button>
-                    </h4>
-                </div>
-                <div id="divCadastros" className="collapse" aria-labelledby="headingCadastros" data-parent="#accordionAtalhos">
-                    <div className="card-body">
-                        <ul className="nav flex-column">
-                            <li className="nav-item"><a className="nav-link" href="#">Acesso</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#">Catálogo</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#">Operações</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#">Horário</a></li>
-                            <li className="nav-item"><a className="nav-link" href="#">Ambiente</a></li>
-                        </ul>
-                    </div>
-                </div>
-                */}
             </div>
-        </section >
-    );
+        </section>
+        <section id="secArvore" className="col-2">
+            <h3>Árvore</h3>
+            <div id='dLinks'><ul className={`nav flex-column ${styles.ul_dLinks}`}>{tela}</ul></div>
+        </section>
+    </>);
 }
 
 export default Atalhos;
