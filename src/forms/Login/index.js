@@ -1,6 +1,6 @@
 // import style from './Login.module.css';
-import InputMatricula from "../../components/InputMatricula";
-import FormButtons from '../../components/FormButtons';
+import InputMatricula from "components/InputMatricula";
+import FormButtons from 'components/FormButtons';
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
@@ -10,6 +10,7 @@ const FormLogin = () => {
 
     const aoEntrar = (evento) => {
         evento.preventDefault();
+
         window.sessionStorage.setItem('usuario', inputs.matricula);
         navigate('/entrada');
     }
@@ -23,29 +24,31 @@ const FormLogin = () => {
 
     return (
         <form onSubmit={evento => aoEntrar(evento)}>
-            <div className="form-group row">
-                <InputMatricula
-                    label={"Matrícula"}
-                    nome={"matricula"}
-                    id={"matricula"}
-                    mascara={"u999999"}
-                    obrigatorio={true}
-                    placeHolder={"'u'+ matricula"}
+            <div className="row">
+                <div className="form-group col">
+                    <InputMatricula
+                        label={"Matrícula"}
+                        nome={"matricula"}
+                        id={"matricula"}
+                        mascara={"u999999"}
+                        obrigatorio={true}
+                        placeHolder={"'u'+ matricula"}
 
-                    onChange={aoAlterar}
-                />
-            </div>
-            <div className="form-group row">
-                <label htmlFor="senha">Senha:</label>
-                <input type="password" className="form-control"
-                    name="senha" id="senha"
-                    placeholder="senha"
-                    required
+                        onChange={aoAlterar}
+                    />
+                </div>
+                <div className="form-group col">
+                    <label htmlFor="senha">Senha:</label>
+                    <input type="password" className="form-control"
+                        name="senha" id="senha"
+                        placeholder="senha"
+                        required
 
-                    onChange={aoAlterar}
-                />
+                        onChange={aoAlterar}
+                    />
+                </div>
             </div>
-            <div className="form-group row">
+            <div className="form-group">
                 <label htmlFor="perfil">Perfil:</label>
                 <select name="perfil" id="perfil"
                     required className="custom-select"

@@ -2,8 +2,10 @@ import FormLogin from "../../forms/Login";
 
 const PageLogin = () => {
     return (<>
-        <h2>Login</h2>
-        <FormLogin />
+        <div className="container">
+            <h2>Login</h2>
+            <FormLogin />
+        </div>
     </>);
 };
 
