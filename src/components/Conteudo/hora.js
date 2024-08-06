@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import style from './hora.module.css';
+import style from './Conteudo.module.css';
 
 export default class Hora extends Component {
 	constructor(probs) {
