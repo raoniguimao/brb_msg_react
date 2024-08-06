@@ -1,18 +1,19 @@
-// import Hora from "./hora";
+import Hora from "./hora";
 import Atalhos from "../../components/Atalhos";
+import styles from './Conteudo.module.css';
 
-const Conteudo = ({ children }) => {
+const Conteudo = ({ props, breadcrumb, children }) => {
 	return (
 		<>
 			<div className="row">
-				<h4>Barra de ações</h4>
+				{props}
 			</div>
 			<div className="row">
 				<div id="dHoraAtual">
-					{/* <Hora /> */}
+					<Hora />
 				</div>
-				<div id="dBreadcrumb">
-					<h4>Breadcrumb</h4>
+				<div id="dBreadcrumb" className={styles.dBreadcrumb}>
+					{breadcrumb}
 				</div>
 			</div>
 			<div className="row">
