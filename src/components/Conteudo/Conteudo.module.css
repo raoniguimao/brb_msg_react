@@ -6,3 +6,8 @@
 .id {
     display: none;
 }
+
+.dBreadcrumb {
+    margin-left: 16px;
+    font-size: large;
+}
