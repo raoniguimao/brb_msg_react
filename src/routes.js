@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PageLogin from './pages/Login';
 import Layout from "./pages/Layout";
-import Tela01 from "./pages/Tela01";
+import Entrada from "./pages/Entrada";
 import Usuario from "pages/Cadastros/Acesso/Usuario";
 
 function AppRoutes() {
@@ -10,8 +10,8 @@ function AppRoutes() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<PageLogin />} />
-                    <Route path="/entrada" element={<Tela01 />} />
-                    <Route path="/Cadastros/Acesso/Usuario" element={<Usuario />} />
+                    <Route path="/entrada" element={<Entrada />} />
+                    <Route path="/Cadastros/Acesso/Usuario" element={<Usuario breadcrumb="/Cadastros/Acesso/Usuario" />} />
                 </Route>
             </Routes>
         </BrowserRouter>

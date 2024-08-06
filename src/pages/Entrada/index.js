@@ -1,7 +1,7 @@
-const Tela01 = () => {
+const Entrada = () => {
     return (<>
         tela tela tela
     </>);
 }
 
-export default Tela01;
+export default Entrada;
